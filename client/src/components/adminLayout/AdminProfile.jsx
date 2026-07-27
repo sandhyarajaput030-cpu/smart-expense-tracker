@@ -20,7 +20,7 @@ export default function AdminProfile() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:8000/api/users/profile",
+        "https://smart-expense-tracker-rgea.onrender.com/api/users/profile",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
