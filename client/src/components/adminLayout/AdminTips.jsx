@@ -26,7 +26,7 @@ export default function AdminTips() {
   // ================= FETCH =================
   const fetchUsers = async () => {
   try {
-    const res = await axios.get("http://localhost:8000/api/users/all", {
+    const res = await axios.get("https://smart-expense-tracker-rgea.onrender.com/api/users/all", {
       headers: { Authorization: `Bearer ${token}` }
     });
     console.log("USERS:", res.data);
@@ -39,7 +39,7 @@ export default function AdminTips() {
 const fetchTips = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:8000/api/tips/admin/all",
+      "https://smart-expense-tracker-rgea.onrender.com/api/tips/admin/all",
       {
         headers: { Authorization: `Bearer ${token}` }
       }
@@ -76,14 +76,14 @@ const fetchTips = async () => {
 
       if (editId) {
         await axios.put(
-          `http://localhost:8000/api/tips/${editId}`,
+          `https://smart-expense-tracker-rgea.onrender.com/api/tips/${editId}`,
           dataToSend,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         alert("Tip updated ✅");
       } else {
         await axios.post(
-          "http://localhost:8000/api/tips/add",
+          "https://smart-expense-tracker-rgea.onrender.com/api/tips/add",
           dataToSend,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -129,7 +129,7 @@ const fetchTips = async () => {
     if (!window.confirm("Delete this tip?")) return;
 
     await axios.delete(
-      `http://localhost:8000/api/tips/${id}`,
+      `https://smart-expense-tracker-rgea.onrender.com/api/tips/${id}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
