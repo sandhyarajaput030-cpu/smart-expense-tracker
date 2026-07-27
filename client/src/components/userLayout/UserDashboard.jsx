@@ -29,7 +29,7 @@ const handleNextMonth = () => {
       const token = localStorage.getItem("token");
 
 const res = await axios.get(
-  "http://localhost:8000/api/dashboard",
+  "https://smart-expense-tracker-rgea.onrender.com/api/dashboard",
   {
     headers: {
       Authorization: `Bearer ${token}`
@@ -42,8 +42,6 @@ const res = await axios.get(
       console.log(err);
     }
   };
-
- // ================= CALCULATIONS =================
 
 // ================= CALCULATIONS =================
 
