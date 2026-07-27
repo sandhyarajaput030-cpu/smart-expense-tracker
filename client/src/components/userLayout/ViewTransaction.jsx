@@ -29,7 +29,7 @@ const res = await axios.get(
     if (window.confirm("Delete this transaction?")) {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:8000/api/expenses/${id}`, {
+      await axios.delete(`https://smart-expense-tracker-rgea.onrender.com/api/expenses/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -46,7 +46,7 @@ const res = await axios.get(
     const token = localStorage.getItem("token");
 
 await axios.put(
-  `http://localhost:8000/api/expenses/${t._id}`,
+  `https://smart-expense-tracker-rgea.onrender.com/api/expenses/${t._id}`,
   { ...t, amount: newAmount },
   {
     headers: {
