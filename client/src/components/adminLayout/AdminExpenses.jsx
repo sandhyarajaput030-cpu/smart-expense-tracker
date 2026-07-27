@@ -18,7 +18,7 @@ export default function AdminExpenses() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:8000/api/expenses/admin/all",
+        "https://smart-expense-tracker-rgea.onrender.com/api/expenses/admin/all",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
