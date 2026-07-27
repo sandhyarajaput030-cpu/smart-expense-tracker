@@ -15,7 +15,7 @@ export default function AddTransaction() {
   // ✅ FIXED CATEGORY API
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/categories") // ✅ fixed
+      .get("https://smart-expense-tracker-rgea.onrender.com/api/categories") // ✅ fixed
       .then((res) => setCategories(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -32,7 +32,7 @@ export default function AddTransaction() {
 }
 
 await axios.post(
-  "http://localhost:8000/api/expenses/add",
+  "https://smart-expense-tracker-rgea.onrender.com/api/expenses/add",
   {
   title: form.description || form.type,
   amount: form.amount,
