@@ -18,7 +18,7 @@ export default function FinancialTips() {
   const fetchTips = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/tips/my",
+        "https://smart-expense-tracker-rgea.onrender.com/api/tips/my",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -34,7 +34,7 @@ export default function FinancialTips() {
   const fetchDailyTip = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/tips/daily",
+        "https://smart-expense-tracker-rgea.onrender.com/api/tips/daily",
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -50,7 +50,7 @@ export default function FinancialTips() {
   const likeTip = async (id) => {
     try {
       await axios.put(
-        `http://localhost:8000/api/tips/like/${id}`,
+        `https://smart-expense-tracker-rgea.onrender.com/api/tips/like/${id}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` }
