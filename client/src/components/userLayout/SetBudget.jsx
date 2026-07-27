@@ -21,7 +21,7 @@ export default function SetBudget() {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-          "http://localhost:8000/api/categories",
+          "https://smart-expense-tracker-rgea.onrender.com/api/categories",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -54,7 +54,7 @@ export default function SetBudget() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:8000/api/budgets",
+        "https://smart-expense-tracker-rgea.onrender.com/api/budgets",
         form,
         {
           headers: {
