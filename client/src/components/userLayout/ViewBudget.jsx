@@ -24,7 +24,7 @@ const handleNextMonth = () => {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          `http://localhost:8000/api/budgets?month=${selectedDate.getMonth()}&year=${selectedDate.getFullYear()}`,
+          `https://smart-expense-tracker-rgea.onrender.com/api/budgets?month=${selectedDate.getMonth()}&year=${selectedDate.getFullYear()}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const handleNextMonth = () => {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:8000/api/budgets/${id}`,
+        `https://smart-expense-tracker-rgea.onrender.com/api/budgets/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -75,7 +75,7 @@ const handleNextMonth = () => {
     const token = localStorage.getItem("token");
 
     const res = await axios.put(
-      `http://localhost:8000/api/budgets/${id}`,
+      `https://smart-expense-tracker-rgea.onrender.com/api/budgets/${id}`,
       {
         budgetAmount: Number(newAmount), // ✅ FIXED
       },
