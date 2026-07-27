@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   // ================= FETCH USERS =================
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/users/all"); 
+      const res = await axios.get("https://smart-expense-tracker-rgea.onrender.com/api/users/all"); 
       // ⚠️ IMPORTANT: backend should return ALL users
       setUsers(res.data);
     } catch (err) {
@@ -24,7 +24,7 @@ const AdminDashboard = () => {
   // ================= ACTIONS =================
   const approveUser = async (id) => {
     try {
-      await axios.put(`http://localhost:8000/api/users/approve/${id}`);
+      await axios.put(`https://smart-expense-tracker-rgea.onrender.com/api/users/approve/${id}`);
       fetchUsers();
     } catch (err) {
       console.log(err);
@@ -33,7 +33,7 @@ const AdminDashboard = () => {
 
   const rejectUser = async (id) => {
     try {
-      await axios.put(`http://localhost:8000/api/users/reject/${id}`);
+      await axios.put(`https://smart-expense-tracker-rgea.onrender.com/api/users/reject/${id}`);
       fetchUsers();
     } catch (err) {
       console.log(err);
