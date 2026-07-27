@@ -23,7 +23,7 @@ export default function Profile() {
         }
 
         const res = await axios.get(
-          "http://localhost:8000/api/users/profile",
+          "https://smart-expense-tracker-rgea.onrender.com/api/users/profile",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ export default function Profile() {
       const token = localStorage.getItem("token");
 
       const res = await axios.put(
-        "http://localhost:8000/api/users/profile",
+        "https://smart-expense-tracker-rgea.onrender.com/api/users/profile",
         form,
         {
           headers: {
