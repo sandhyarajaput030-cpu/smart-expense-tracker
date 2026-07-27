@@ -22,7 +22,7 @@ export default function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/users/login",
+        "https://smart-expense-tracker-rgea.onrender.com/api/users/login",
         form
       );
 
