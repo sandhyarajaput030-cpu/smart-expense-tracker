@@ -10,7 +10,7 @@ const Category = () => {
   // ================= FETCH =================
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/categories");
+      const res = await axios.get("https://smart-expense-tracker-rgea.onrender.com/api/categories");
       setCategories(res.data);
     } catch (err) {
       console.log(err);
@@ -36,13 +36,13 @@ const Category = () => {
 
   try {
     if (editId) {
-      await axios.put(`http://localhost:8000/api/categories/${editId}`, {
+      await axios.put(`https://smart-expense-tracker-rgea.onrender.com/api/categories/${editId}`, {
         name,
         type,
       });
       setEditId(null);
     } else {
-      await axios.post("http://localhost:8000/api/categories", {
+      await axios.post("https://smart-expense-tracker-rgea.onrender.com/api/categories", {
         name,
         type,
       });
@@ -59,7 +59,7 @@ const Category = () => {
   // ================= DELETE =================
   const deleteCategory = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/categories/${id}`);
+      await axios.delete(`https://smart-expense-tracker-rgea.onrender.com/api/categories/${id}`);
       fetchCategories();
     } catch (err) {
       console.log(err);
